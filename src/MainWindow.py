@@ -8,13 +8,13 @@ import scipy.misc.pilutil
 import matplotlib.cm
 
 from Camera import CameraError
-from CameraImage import *
+import CameraImage
 from AwesomeColorMaps import awesome, isoluminant
-from ColorMapIndicator import *
-from CameraDialog import *
-from DeltaDetector import *
-from MinMaxDisplay import *
-from BeamProfiler import *
+import ColorMapIndicator
+import CameraDialog
+import DeltaDetector
+import MinMaxDisplay
+import BeamProfiler
 
 class MainWindow:
     '''The main window for the Beams application.'''
@@ -199,28 +199,28 @@ class MainWindow:
         self.main_window.get_child().pack_start(manager.get_widget('/menubar'), expand=False)
         self.main_window.get_child().pack_start(manager.get_widget('/toolbar'), expand=False)
         
-        self.screen = CameraImage()
+        self.screen = CameraImage.CameraImage()
         self.screen.set_size_request(640, 480)
         builder.get_object('main_hbox').pack_start(self.screen)
         
-        self.cmap_sample = ColorMapIndicator()
+        self.cmap_sample = ColorMapIndicator.ColorMapIndicator()
         self.cmap_sample.set_size_request(128, 10)
         builder.get_object('colorscale_vbox').pack_start(self.cmap_sample)
 
         # Build the camera selection dialog box
-        self.cameras_dialog = CameraDialog()
+        self.cameras_dialog = CameraDialog.CameraDialog()
         self.cameras_dialog.connect('response', self.on_cameras_response)
         
         # Build the beam profiler
-        self.profiler = BeamProfiler(self.screen)
+        self.profiler = BeamProfiler.BeamProfiler(self.screen)
         builder.get_object('profiler_toggle').props.active = self.profiler.active
 
         # Build the min-max display
-        self.minmax = MinMaxDisplay(self.screen)
+        self.minmax = MinMaxDisplay.MinMaxDisplay(self.screen)
         builder.get_object('minmax_toggle').props.active = self.minmax.active
 
         # Build the delta detector
-        self.delta = DeltaDetector(self.screen)
+        self.delta = DeltaDetector.DeltaDetector(self.screen)
         builder.get_object('detect_toggle').props.active = self.delta.active
         builder.get_object('delta_threshold').props.value = self.delta.threshold
 
