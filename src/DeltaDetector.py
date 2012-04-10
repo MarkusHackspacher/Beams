@@ -2,7 +2,7 @@ import numpy as N
 import gobject
 import gtk.gdk
 
-from CameraImage import *
+#import CameraImage
 
 class DeltaDetector(object):
 

@@ -1,5 +1,5 @@
-import numpy as N
-from CameraImage import *
+#import numpy as N
+#import CameraImage
 
 class MinMaxDisplay(object):
 

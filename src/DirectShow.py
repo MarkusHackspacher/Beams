@@ -1,13 +1,13 @@
 import numpy as N
 import VideoCapture
 
-from Camera import *
+import Camera
 
-class DirectShow(Camera):
+class DirectShow(Camera.Camera):
     '''Camera that interfaces through DirectShow'''
     
     def __init__(self, *args, **kwargs):
-        Camera.__init__(self, *args, **kwargs)
+        Camera.Camera.__init__(self, *args, **kwargs)
         self._cam = None
         self._width, self._height = (640, 480) # Uneducated guess
     

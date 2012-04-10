@@ -1,7 +1,7 @@
 #coding: utf8
 import numpy as N
 import matplotlib.patches
-from CameraImage import *
+#from CameraImage import *
 
 class BeamProfiler(object):
 

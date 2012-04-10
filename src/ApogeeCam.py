@@ -4,13 +4,13 @@ import win32com.client
 win32com.client.gencache.EnsureModule('{A2882C73-7CFB-11D4-9155-0060676644C1}', 0, 1, 0)
 from win32com.client import constants as Constants
 
-from Camera import *
+import Camera
 
-class ApogeeCam(Camera):
+class ApogeeCam(Camera.Camera):
     '''Apogee Alta or Ascent camera'''
     
     def __init__(self, interface='usb', *args, **kwargs):
-        Camera.__init__(self, *args, **kwargs)
+        Camera.Camera.__init__(self, *args, **kwargs)
         self._cam = win32com.client.Dispatch('Apogee.Camera2')
         if interface == 'usb':
             self._interface = Constants.Apn_Interface_USB

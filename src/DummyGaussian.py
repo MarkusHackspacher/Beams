@@ -1,11 +1,11 @@
 import numpy as N
 import numpy.random
 
-from Camera import *
+import Camera
 
-class DummyGaussian(Camera):
+class DummyGaussian(Camera.Camera):
     def __init__(self, *args, **kwargs):
-        Camera.__init__(self, *args, **kwargs)
+        Camera.Camera.__init__(self, *args, **kwargs)
         
         self._supported_resolutions = [(320, 240), (640, 480)]
         self._resolution = (320, 240)
