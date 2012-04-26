@@ -1,3 +1,5 @@
+#coding: utf8
+
 import cv
 from cv import CV_CAP_PROP_FRAME_WIDTH as FRAME_WIDTH
 from cv import CV_CAP_PROP_FRAME_HEIGHT as FRAME_HEIGHT

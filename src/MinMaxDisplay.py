@@ -1,5 +1,4 @@
-#import numpy as N
-#import CameraImage
+#coding: utf8
 
 class MinMaxDisplay(object):
 

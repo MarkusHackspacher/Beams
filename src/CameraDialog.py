@@ -1,3 +1,5 @@
+#coding: utf8
+
 import os.path
 import imp
 import glob

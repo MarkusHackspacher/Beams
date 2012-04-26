@@ -1,10 +1,10 @@
 #!/usr/bin/env python
+#coding: utf8
 
 import sys
 import gtk
 import glib
 import scipy as S
-import scipy.misc.pilutil
 import matplotlib.cm
 
 from Camera import CameraError

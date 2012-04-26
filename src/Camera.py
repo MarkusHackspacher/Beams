@@ -1,3 +1,5 @@
+#coding: utf8
+
 class CameraError(Exception):
     def __init__(self, msg, cam):
         self.msg = msg

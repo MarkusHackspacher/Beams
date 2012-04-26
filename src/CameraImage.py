@@ -1,4 +1,5 @@
-import gtk, gobject
+#coding: utf8
+
 import numpy as N
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_gtkagg \

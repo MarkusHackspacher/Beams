@@ -1,3 +1,5 @@
+#coding: utf8
+
 import gtk, gobject
 import numpy as N
 

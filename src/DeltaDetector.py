@@ -1,8 +1,8 @@
+#coding: utf8
+
 import numpy as N
 import gobject
 import gtk.gdk
-
-#import CameraImage
 
 class DeltaDetector(object):
 
